@@ -31,7 +31,8 @@
     width: 60%;
     /* max-width: 340px; */
     max-width: 90vw;
-    padding: 10vh 10vh;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
     /* min-height: 450px; */
     /* border: 0px; */
     border-top: 8px solid var(--color-text);
