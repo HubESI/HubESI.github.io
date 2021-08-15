@@ -15,6 +15,6 @@ if(url_params.has("code")){
         .catch((error) => {
             alert.style.color = "red";
             alert.innerHTML = "An error occurred";
-            log('Request failed', error);
+            console.log('Request failed', error);
         });
 }
