@@ -18,26 +18,3 @@ if(url_params.has("code")){
             log('Request failed', error);
         });
 }
-
-btn.addEventListener('click', () => {
-    const email_field = document.querySelector(".input");
-    const alert = document.getElementById("join-with-email")
-    if (email_field.value.split("@")[1] !== "esi.dz"){
-        alert.style.color = "red";
-        alert.innerHTML = "Please provide your @esi.dz email";
-        email_field.value = "@esi.dz";
-    }
-    else{
-        fetch(`${API_URL}/check?email=${email_field.value}`)
-        .then((response) => response.json())
-        .then((data) => {
-            alert.style.color = "green";
-            alert.innerHTML = data.description;
-        })
-        .catch((error) => {
-            alert.style.color = "red";
-            alert.innerHTML = "An error occurred";
-            log('Request failed', error);
-        });
-    };
-})
